@@ -18,11 +18,13 @@ namespace FightClub_V_3._0
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Autorization : Window
     {
-        public MainWindow()
+        public Autorization()
         {
             InitializeComponent();
+            VIewModel.AutorizationViewModel atvm = new VIewModel.AutorizationViewModel(this);
         }
+
     }
 }

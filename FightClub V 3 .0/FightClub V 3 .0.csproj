@@ -54,7 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Page Include="View\Autorization.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -62,12 +62,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="VIewModel\AutorizationViewModel.cs" />
+    <Compile Include="VIewModel\GameViewModel.cs" />
+    <Compile Include="View\Autorization.xaml.cs">
+      <DependentUpon>Autorization.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Game.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="View\Game.xaml.cs">
+      <DependentUpon>Game.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\PlayerAtributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -92,6 +103,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Img\fist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sound\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Img\hero.png" />
+    <Resource Include="View\Img\enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Img\body.png" />
+    <Resource Include="View\Img\helmet.png" />
+    <Resource Include="View\Img\leg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Img\backgroundgame.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
